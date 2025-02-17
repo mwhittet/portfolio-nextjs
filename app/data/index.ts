@@ -1,20 +1,26 @@
-import type { NavItems } from '../types';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import type { Links, PortfolioCards, SocialLinks } from '../types';
 
-export const FOOTER_NAV_ITEMS: NavItems = [
-  { href: 'https://github.com/mwhittet/', label: 'Visit my Github profile' },
+export const SOCIAL_LINKS: SocialLinks = [
+  {
+    href: 'https://github.com/mwhittet/',
+    icon: FaGithub,
+    label: 'Visit my Github profile',
+  },
   {
     href: 'https://www.linkedin.com/in/mike-w-b8756168/',
+    icon: FaLinkedin,
     label: 'Visit my LinkedIn profile',
   },
 ];
 
-export const HEADER_NAV_ITEMS: NavItems = [
+export const HEADER_LINKS: Links = [
   { href: '/about', label: 'About' },
   { href: '/portfolio', label: 'Portfolio' },
   { href: '/contact', label: 'Contact' },
 ];
 
-export const PORTFOLIO_ITEMS = [
+export const PORTFOLIO_CARDS: PortfolioCards = [
   {
     hrefUrl: '/portfolio/barnes-code',
     imageUrl: '/images/portfolio/barnescode.jpg',

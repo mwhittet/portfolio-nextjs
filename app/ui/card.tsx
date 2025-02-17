@@ -1,13 +1,6 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
-
-type Card = {
-  href: string;
-  src: string;
-  name: string;
-};
+import type { Card } from '../types';
 
 export default function Card({ href, name, src }: Card) {
   return (

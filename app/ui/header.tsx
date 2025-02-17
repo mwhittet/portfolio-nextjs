@@ -3,7 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { HEADER_NAV_ITEMS } from '../data';
+
+import { HEADER_LINKS } from '../data';
 
 export default function Header() {
   const pathname = usePathname();
@@ -21,14 +22,14 @@ export default function Header() {
       </Link>
 
       <nav aria-label="main navigation">
-        {HEADER_NAV_ITEMS.map(({ href, label }) => {
+        {HEADER_LINKS.map(({ href, label }, index) => {
           const isActive = pathname === href;
 
           return (
             <Link
               className="group mr-4 last:mr-0 text-2xl font-bold"
               href={href}
-              key={href}
+              key={index}
             >
               <span
                 className={`bg-left-bottom bg-gradient-to-r from-international-orange to-international-orange bg-[length:0%_3px] bg-no-repeat group-hover:bg-[length:100%_3px] transition-all delay-150 duration-500 ease-out pb-1.5 ${
