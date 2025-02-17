@@ -1,0 +1,68 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import 'tailwindcss';
+
+:root {
+  --akaroa: #d4baa5;
+  --bone: #e2d1c3;
+  --dustyGray: #d3d3d3;
+  --internationalOrange: #ff5400;
+  --malibu: #80bdff;
+  --mineShaft: #222;
+  --springWood: #fdfcfb;
+  --white: #fff;
+}
+
+@theme {
+  --color-international-orange: #ff5400;
+}
+
+html,
+body {
+  background: linear-gradient(
+    135deg,
+    var(--springWood),
+    var(--bone),
+    var(--akaroa)
+  );
+  color: var(--mineShaft);
+  font-family: 'Marmelad', sans-serif;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 30px;
+  text-decoration: underline var(--internationalOrange);
+  text-underline-offset: 7px;
+}
+
+h2 {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-weight: bold;
+  margin: 0px 0px 30px;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+p:last-child {
+  margin: 0;
+}
+
+figure {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin: 0 auto 30px;
+  line-height: 1.4;
+  padding: 0;
+  text-align: center;
+}
+
+figure figcaption {
+  color: var(--internationalOrange);
+}
