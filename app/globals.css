@@ -16,7 +16,9 @@
 }
 
 @theme {
+  --color-bone: #e2d1c3;
   --color-international-orange: #ff5400;
+  --color-spring-wood: #fdfcfb;
 }
 
 html,

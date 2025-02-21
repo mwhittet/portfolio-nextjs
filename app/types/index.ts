@@ -23,4 +23,5 @@ export type PortfolioCards = {
   hrefUrl: string;
   imageUrl: string;
   name: string;
+  portfolioSlug: string;
 }[];

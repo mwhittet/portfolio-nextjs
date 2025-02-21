@@ -19,11 +19,12 @@ export default function Page() {
         ...
       </p>
       <Image
+        alt="404 facepalm"
         className="justify-self-center mt-7 rounded-[50%]"
+        height={275}
+        priority
         src="/404.jpg"
         width={275}
-        height={275}
-        alt="404 facepalm"
       />
     </>
   );
