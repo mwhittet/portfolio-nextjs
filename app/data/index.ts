@@ -1,5 +1,10 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import type { Links, PortfolioCards, SocialLinks } from '../types';
+import type {
+  Links,
+  PortfolioCards,
+  PortfolioItems,
+  SocialLinks,
+} from '@/app/types';
 
 export const SOCIAL_LINKS: SocialLinks = [
   {
@@ -59,7 +64,7 @@ export const PORTFOLIO_CARDS: PortfolioCards = [
   },
 ];
 
-export const PORTFOLIO_ITEMS = [
+export const PORTFOLIO_ITEMS: PortfolioItems = [
   {
     title: 'Barnes Code',
     slug: 'barnes-code',

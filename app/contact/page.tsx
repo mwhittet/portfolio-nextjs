@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
 
+import ContactForm from '@/app/ui/contactForm';
+
 export const metadata: Metadata = {
   title: 'Contact',
 };
@@ -23,6 +25,11 @@ export default function Page() {
         </Link>
         .
       </p>
+      <ContactForm />
+      <figure className="lg:w-1/2 m-0">
+        <blockquote>Creativity is contagious. Pass it on.</blockquote>
+        <figcaption> — Albert Einstein</figcaption>
+      </figure>
     </>
   );
 }

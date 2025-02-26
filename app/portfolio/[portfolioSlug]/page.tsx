@@ -1,5 +1,6 @@
-import Card from '@/app/ui/card';
 import { PORTFOLIO_CARDS, PORTFOLIO_ITEMS } from '../../data';
+
+import Card from '@/app/ui/card';
 
 export const dynamicParams = false;
 

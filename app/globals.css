@@ -17,8 +17,10 @@
 
 @theme {
   --color-bone: #e2d1c3;
+  --color-dustyGray: #d3d3d3;
   --color-international-orange: #ff5400;
   --color-spring-wood: #fdfcfb;
+  --color-mineShaft: #222;
 }
 
 html,

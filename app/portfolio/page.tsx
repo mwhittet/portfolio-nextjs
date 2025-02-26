@@ -1,6 +1,5 @@
 import Card from '@/app/ui/card';
 import { Metadata } from 'next';
-
 import { PORTFOLIO_CARDS } from '../data';
 
 export const metadata: Metadata = {

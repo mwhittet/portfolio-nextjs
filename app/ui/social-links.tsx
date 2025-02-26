@@ -20,7 +20,7 @@ export default function SocialLinks() {
   );
 }
 
-export function SocialLink({ href, icon, label }: SocialLink) {
+function SocialLink({ href, icon, label }: SocialLink) {
   const Icon = icon;
 
   return (
