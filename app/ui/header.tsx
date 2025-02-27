@@ -8,7 +8,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <div className="p-4 md:pr-12 md:pl-12 flex justify-between items-center">
+    <header className="p-4 md:pr-12 md:pl-12 flex justify-between items-center">
       <Link
         className="block transition-[fill] delay-300 duration-300 ease-out hover:fill-international-orange motion-reduce:transition-none"
         href="/"
@@ -48,6 +48,6 @@ export default function Header() {
           );
         })}
       </nav>
-    </div>
+    </header>
   );
 }
