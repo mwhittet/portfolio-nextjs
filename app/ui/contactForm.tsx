@@ -93,7 +93,7 @@ export default function ContactForm() {
         )}
       </label>
       <button
-        className="block bg-mineShaft text-white rounded-sm p-2 pr-4 pl-4 cursor-pointer transition-colors duration-500 ease-out hover:bg-international-orange"
+        className="block bg-mineShaft text-white rounded-sm py-2 px-4 cursor-pointer transition-colors duration-500 ease-out hover:bg-international-orange"
         type="submit"
       >
         Send message
