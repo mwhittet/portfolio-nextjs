@@ -8,7 +8,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <div className="pt-4 pr-12 pb-4 pl-12 flex justify-between items-center">
+    <div className="p-4 md:pr-12 md:pl-12 flex justify-between items-center">
       <Link
         className="block transition-[fill] delay-300 duration-300 ease-out hover:fill-international-orange motion-reduce:transition-none"
         href="/"
@@ -31,7 +31,7 @@ export default function Header() {
 
           return (
             <Link
-              className="group mr-4 last:mr-0 text-2xl font-bold"
+              className="group mr-4 last:mr-0 text-xl md:text-2xl font-bold"
               href={href}
               key={index}
             >

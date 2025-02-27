@@ -39,7 +39,7 @@ export default function ContactForm() {
       className="flex flex-col mb-7 items-center"
       onSubmit={handleSubmit(onSubmit)}
     >
-      <label className="block mb-4 font-bold w-lg">
+      <label className="block mb-4 font-bold w-full sm:w-lg">
         Name:
         <input
           aria-describedby="name-error"
@@ -56,7 +56,7 @@ export default function ContactForm() {
           </p>
         )}
       </label>
-      <label className="block mb-4 font-bold w-lg">
+      <label className="block mb-4 font-bold w-full sm:w-lg">
         Email address:
         <input
           aria-describedby="email-error"
@@ -73,7 +73,7 @@ export default function ContactForm() {
           </p>
         )}
       </label>
-      <label className="block mb-4 font-bold w-lg">
+      <label className="block mb-4 font-bold w-full sm:w-lg">
         Message:
         <textarea
           aria-describedby="message-error"

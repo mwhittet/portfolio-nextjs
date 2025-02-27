@@ -58,13 +58,13 @@
     {
       "src": "/screenshot1.webp",
       "type": "image/webp",
-      "sizes": "390x844"
+      "sizes": "360x740"
     },
     {
       "src": "/screenshot2.webp",
       "type": "image/webp",
       "form_factor": "wide",
-      "sizes": "2559x1271"
+      "sizes": "2559x1270"
     }
   ],
   "short_name": "MW's Portfolio",

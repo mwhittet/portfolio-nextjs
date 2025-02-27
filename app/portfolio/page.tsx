@@ -23,12 +23,12 @@ export default function Portfolio() {
         when I can too, here are a few examples:
       </p>
       <h2>Personal projects:</h2>
-      <div className="grid gap-7 grid-cols-[1fr_1fr] mb-7">
+      <div className="grid gap-7 md:grid-cols-[1fr_1fr] mb-7">
         {portfolioCards(0, 2)}
       </div>
 
       <h2>Professional experience:</h2>
-      <div className="grid gap-7 grid-cols-[1fr_1fr]">{portfolioCards(2)}</div>
+      <div className="grid gap-7 md:grid-cols-[1fr_1fr]">{portfolioCards(2)}</div>
     </>
   );
 }
