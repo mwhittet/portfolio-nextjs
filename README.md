@@ -6,7 +6,7 @@
   My NextJs Portfolio
 </h1>
 <h3 align="center">
-  Status: In development
+  Status: Now live!
 </h3>
 <p align="center">
   Proudly built with NextJs, TypeScript & Tailwind, hosted via Netlify
