@@ -15,3 +15,7 @@
 <p align="center">
   <img alt="TypeScript" src="https://img.shields.io/npm/types/typescript" />
 </p>
+
+## TODO
+
+- [ ] Update manifest.json screenshots once all styling has been finalised
