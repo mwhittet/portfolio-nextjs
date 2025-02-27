@@ -14,7 +14,7 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { portfolioSlug: string };
+  params: Promise<{ portfolioSlug: string }>;
 }) {
   const { portfolioSlug } = await params;
   const pageData = PORTFOLIO_ITEMS.filter(function (elem) {
@@ -30,7 +30,7 @@ export async function generateMetadata({
 export default async function PortfolioItem({
   params,
 }: {
-  params: { portfolioSlug: string };
+  params: Promise<{ portfolioSlug: string }>;
 }) {
   const { portfolioSlug } = await params;
   const pageData = PORTFOLIO_ITEMS.filter(function (elem) {
