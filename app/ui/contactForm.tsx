@@ -13,6 +13,8 @@ export default function ContactForm() {
     reset,
   } = useForm<ContactFormType>({ resolver: zodResolver(ContactFormSchema) });
   const [successMessage, setSuccessMessage] = useState<string>('');
+  const fieldStyling: string =
+    'font-normal mt-2 w-full bg-white h-10 p-2 rounded-sm border border-dustyGray focus:outline-0 focus:ring-4 focus:ring-malibu/40 focus:border-malibu';
 
   const onSubmit = async (data: ContactFormType) => {
     try {
@@ -43,7 +45,7 @@ export default function ContactForm() {
         Name:
         <input
           aria-describedby="name-error"
-          className="font-normal mt-2 w-full bg-white h-10 p-2 rounded-sm border border-dustyGray focus:outline-0 focus:ring-4 focus:ring-malibu/40 focus:border-malibu"
+          className={fieldStyling}
           {...register('name', { required: 'Name is required' })}
         />
         {errors.name && (
@@ -60,7 +62,7 @@ export default function ContactForm() {
         Email address:
         <input
           aria-describedby="email-error"
-          className="font-normal mt-2 w-full bg-white h-10 p-2 rounded-sm border border-dustyGray focus:outline-0 focus:ring-4 focus:ring-malibu/40 focus:border-malibu"
+          className={fieldStyling}
           {...register('email', { required: 'Email is required' })}
         />
         {errors.email && (
@@ -77,7 +79,7 @@ export default function ContactForm() {
         Message:
         <textarea
           aria-describedby="message-error"
-          className="font-normal mt-2 w-full bg-white h-36 p-2 rounded-sm border border-dustyGray focus:outline-0 focus:ring-4 focus:ring-malibu/40 focus:border-malibu"
+          className={`${fieldStyling} h-36`}
           {...register('message', { required: 'Message is required' })}
         />
         {errors.message && (
@@ -96,7 +98,9 @@ export default function ContactForm() {
       >
         Send message
       </button>
-      {successMessage && <p>{successMessage}</p>}
+      {successMessage && (
+        <p className="!mt-4 text-green-600">{successMessage}</p>
+      )}
     </form>
   );
 }

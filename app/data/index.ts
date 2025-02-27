@@ -12,6 +12,8 @@ export const HEADER_LINKS: Links = [
   { href: '/contact', label: 'Contact' },
 ];
 
+export const NAME: string = 'Michael Whittet';
+
 export const PORTFOLIO_CARDS: PortfolioCards = [
   {
     hrefUrl: '/portfolio/barnes-code',
@@ -57,6 +59,7 @@ export const PORTFOLIO_ITEMS: PortfolioItems = [
     slug: 'barnes-code',
     intro: [
       "A good friend of mine asked for some help with his company website as he couldn't find the time to dedicate to it. A design was provided but I was given free reign with the initial setup so I decided to use Next.js with SASS for the styling and React Testing Library for the unit testing (not much was needed, this was more of a nice to have so that it could be built upon) and Netlify is used for deploying. It's a great little website with some subtle animations I created using framer-motion, it has a very high accessability & speed score and it's visually stunning on all device sizes.",
+      'Unfortunately the company is in the process of closing down but a few screenshots can be seen below.',
     ],
     achievements: ['First live website built using Next.js'],
     skills: [

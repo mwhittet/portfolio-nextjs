@@ -8,12 +8,18 @@ export type Card = {
 };
 
 export const ContactFormSchema = z.object({
-  name: z.string().min(1, 'Name is required').max(100, 'Name is too long'),
-  email: z.string().min(1, 'Email is required').email('Invalid email format'),
+  name: z
+    .string()
+    .min(1, { message: 'Name is required' })
+    .max(100, { message: 'Name is too long' }),
+  email: z
+    .string()
+    .min(1, { message: 'Email is required' })
+    .email({ message: 'Invalid email format' }),
   message: z
     .string()
-    .min(1, 'Message is required')
-    .max(1000, 'Message is too long'),
+    .min(1, { message: 'Message is required' })
+    .max(1000, { message: 'Message is too long' }),
 });
 
 export type ContactFormType = z.infer<typeof ContactFormSchema>;

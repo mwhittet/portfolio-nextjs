@@ -12,7 +12,7 @@ export default function Card({ href, name, src }: Card) {
         height={340}
         width={800}
       />
-      <span className="block text-2xl mt-2.5 md:opacity-0 group-hover:opacity-100">
+      <span className="block text-xl sm:text-2xl mt-2.5 md:opacity-0 group-hover:opacity-100">
         {name}
       </span>
     </>
