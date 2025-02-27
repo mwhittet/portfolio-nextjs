@@ -1,9 +1,9 @@
 import './globals.css';
 
+import type { Metadata } from 'next';
+import { Marmelad } from 'next/font/google';
 import Footer from '@/app/ui/footer';
 import Header from '@/app/ui/header';
-import { Marmelad } from 'next/font/google';
-import type { Metadata } from 'next';
 
 const marmelad = Marmelad({
   weight: '400',

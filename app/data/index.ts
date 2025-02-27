@@ -6,19 +6,6 @@ import type {
   SocialLinks,
 } from '@/app/types';
 
-export const SOCIAL_LINKS: SocialLinks = [
-  {
-    href: 'https://github.com/mwhittet/',
-    icon: FaGithub,
-    label: 'Visit my Github profile',
-  },
-  {
-    href: 'https://www.linkedin.com/in/mike-w-b8756168/',
-    icon: FaLinkedin,
-    label: 'Visit my LinkedIn profile',
-  },
-];
-
 export const HEADER_LINKS: Links = [
   { href: '/about', label: 'About' },
   { href: '/portfolio', label: 'Portfolio' },
@@ -331,5 +318,18 @@ export const PORTFOLIO_ITEMS: PortfolioItems = [
         image: '/images/projects/virginmobile.jpg',
       },
     ],
+  },
+];
+
+export const SOCIAL_LINKS: SocialLinks = [
+  {
+    href: 'https://github.com/mwhittet/',
+    icon: FaGithub,
+    label: 'Visit my Github profile',
+  },
+  {
+    href: 'https://www.linkedin.com/in/mike-w-b8756168/',
+    icon: FaLinkedin,
+    label: 'Visit my LinkedIn profile',
   },
 ];

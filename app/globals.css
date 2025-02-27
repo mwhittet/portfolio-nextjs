@@ -1,25 +1,12 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
 @import 'tailwindcss';
 
-:root {
-  --akaroa: #d4baa5;
-  --bone: #e2d1c3;
-  --dustyGray: #d3d3d3;
-  --internationalOrange: #ff5400;
-  --malibu: #80bdff;
-  --mineShaft: #222;
-  --springWood: #fdfcfb;
-  --white: #fff;
-}
-
 @theme {
+  --color-akaroa: #d4baa5;
   --color-bone: #e2d1c3;
   --color-dustyGray: #d3d3d3;
   --color-international-orange: #ff5400;
   --color-spring-wood: #fdfcfb;
+  --color-malibu: #80bdff;
   --color-mineShaft: #222;
 }
 
@@ -27,11 +14,11 @@ html,
 body {
   background: linear-gradient(
     135deg,
-    var(--springWood),
-    var(--bone),
-    var(--akaroa)
+    var(--color-spring-wood),
+    var(--color-bone),
+    var(--color-akaroa)
   );
-  color: var(--mineShaft);
+  color: var(--color-mineShaft);
   font-family: 'Marmelad', sans-serif;
 }
 
@@ -40,14 +27,14 @@ h1 {
   font-weight: bold;
   line-height: 1.4;
   margin-bottom: 30px;
-  text-decoration: underline var(--internationalOrange);
+  text-decoration: underline var(--color-international-orange);
   text-underline-offset: 7px;
 }
 
 h2 {
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   font-weight: bold;
-  margin: 0px 0px 30px;
+  margin: 0 0 30px;
 }
 
 p {
@@ -68,5 +55,5 @@ figure {
 }
 
 figure figcaption {
-  color: var(--internationalOrange);
+  color: var(--color-international-orange);
 }

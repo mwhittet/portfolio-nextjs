@@ -1,5 +1,4 @@
-import { PORTFOLIO_CARDS, PORTFOLIO_ITEMS } from '../../data';
-
+import { PORTFOLIO_CARDS, PORTFOLIO_ITEMS } from '@/app/data';
 import Card from '@/app/ui/card';
 
 export const dynamicParams = false;
@@ -12,7 +11,23 @@ export function generateStaticParams() {
   return pageSlugs;
 }
 
-export default async function Page({
+export async function generateMetadata({
+  params,
+}: {
+  params: { portfolioSlug: string };
+}) {
+  const { portfolioSlug } = await params;
+  const pageData = PORTFOLIO_ITEMS.filter(function (elem) {
+    return elem.slug == portfolioSlug;
+  });
+  const { title } = pageData[0];
+
+  return {
+    title,
+  };
+}
+
+export default async function PortfolioItem({
   params,
 }: {
   params: { portfolioSlug: string };

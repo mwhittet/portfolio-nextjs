@@ -1,12 +1,12 @@
-import Card from '@/app/ui/card';
 import { Metadata } from 'next';
-import { PORTFOLIO_CARDS } from '../data';
+import { PORTFOLIO_CARDS } from '@/app/data';
+import Card from '@/app/ui/card';
 
 export const metadata: Metadata = {
   title: 'Portfolio',
 };
 
-export default function Page() {
+export default function Portfolio() {
   const portfolioCards = (start: number, end?: number) =>
     PORTFOLIO_CARDS.slice(start, end).map((item, index) => {
       const { hrefUrl, imageUrl, name } = item;

@@ -1,13 +1,12 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
-
 import ContactForm from '@/app/ui/contactForm';
 
 export const metadata: Metadata = {
   title: 'Contact',
 };
 
-export default function Page() {
+export default function Contact() {
   return (
     <>
       <h1>Contact</h1>

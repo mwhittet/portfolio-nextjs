@@ -1,10 +1,9 @@
 'use client';
 
-import { ContactFormSchema, ContactFormType } from '@/app/types';
-
-import { useForm } from 'react-hook-form';
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { ContactFormSchema, ContactFormType } from '@/app/types';
 
 export default function ContactForm() {
   const {
@@ -44,7 +43,7 @@ export default function ContactForm() {
         Name:
         <input
           aria-describedby="name-error"
-          className="font-normal mt-2 w-full bg-white h-10 p-2 rounded-sm border border-dustyGray"
+          className="font-normal mt-2 w-full bg-white h-10 p-2 rounded-sm border border-dustyGray focus:outline-0 focus:ring-4 focus:ring-malibu/40 focus:border-malibu"
           {...register('name', { required: 'Name is required' })}
         />
         {errors.name && (
@@ -61,7 +60,7 @@ export default function ContactForm() {
         Email address:
         <input
           aria-describedby="email-error"
-          className="font-normal mt-2 w-full bg-white h-10 p-2 rounded-sm border border-dustyGray"
+          className="font-normal mt-2 w-full bg-white h-10 p-2 rounded-sm border border-dustyGray focus:outline-0 focus:ring-4 focus:ring-malibu/40 focus:border-malibu"
           {...register('email', { required: 'Email is required' })}
         />
         {errors.email && (
@@ -78,7 +77,7 @@ export default function ContactForm() {
         Message:
         <textarea
           aria-describedby="message-error"
-          className="font-normal mt-2 w-full bg-white h-36 p-2 rounded-sm border border-dustyGray"
+          className="font-normal mt-2 w-full bg-white h-36 p-2 rounded-sm border border-dustyGray focus:outline-0 focus:ring-4 focus:ring-malibu/40 focus:border-malibu"
           {...register('message', { required: 'Message is required' })}
         />
         {errors.message && (
@@ -92,7 +91,7 @@ export default function ContactForm() {
         )}
       </label>
       <button
-        className="block bg-mineShaft text-white rounded-sm p-2 pr-4 pl-4 cursor-pointer"
+        className="block bg-mineShaft text-white rounded-sm p-2 pr-4 pl-4 cursor-pointer transition-colors duration-500 ease-out hover:bg-international-orange"
         type="submit"
       >
         Send message

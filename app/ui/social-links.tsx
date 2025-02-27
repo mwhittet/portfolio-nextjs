@@ -2,18 +2,15 @@
 
 import Link from 'next/link';
 import { IconContext } from 'react-icons';
-import type { SocialLink } from '../types';
-
-import { SOCIAL_LINKS } from '../data';
+import { SOCIAL_LINKS } from '@/app/data';
+import type { SocialLink } from '@/app/types';
 
 export default function SocialLinks() {
   return (
     <nav className="flex justify-center pb-4">
       <IconContext.Provider value={{ size: '2rem' }}>
         {SOCIAL_LINKS.map(({ icon, href, label }, index) => {
-          return (
-            <SocialLink icon={icon} href={href} key={index} label={label} />
-          );
+          return <SocialLink {...{ icon, href, label }} key={index} />;
         })}
       </IconContext.Provider>
     </nav>

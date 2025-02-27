@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: '404 Not Found',
 };
 
-export default function Page() {
+export default function NotFound() {
   return (
     <>
       <h1>404 Not Found</h1>

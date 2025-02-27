@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import type { Card } from '../types';
+import type { Card } from '@/app/types';
 
 export default function Card({ href, name, src }: Card) {
   const cardContent = (
