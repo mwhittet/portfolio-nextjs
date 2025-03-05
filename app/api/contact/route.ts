@@ -19,7 +19,7 @@ export async function POST(req: Request) {
       html,
     };
 
-    sgMail.send(msg);
+    await sgMail.send(msg);
 
     return NextResponse.json(
       { message: 'Email sent successfully' },
