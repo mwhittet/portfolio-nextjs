@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${marmelad.className} antialiased`}>
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-dvh">
           <Header />
           {children}
           <Footer />
