@@ -7,7 +7,7 @@ export default function Card({ href, name, src }: Card) {
     <>
       <Image
         alt=""
-        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNUqgcAAMkAo/sGMSwAAAAASUVORK5CYII="
+        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
         className="md:transform-[rotate(15deg)_scale(1.4)] duration-400 ease-in-out"
         placeholder="blur"
         src={src}
