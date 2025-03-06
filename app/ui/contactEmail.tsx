@@ -2,8 +2,6 @@ import { ReactElement } from 'react';
 import {
   Body,
   Container,
-  Heading,
-  Hr,
   Html,
   Section,
   Tailwind,
@@ -19,16 +17,14 @@ export default function ContactEmail(props: ContactFormType): ReactElement {
       <Tailwind>
         <Body>
           <Container>
-            <Heading as="h2">Message</Heading>
-            <Hr />
             <Section>
               <Text className="text-base leading-6 text-black">
                 <span className="font-bold text-black">Name: </span>
                 {name}
               </Text>
-              <Text className="text-base leading-6">
+              <Text className="text-base leading-6 text-black">
                 <span className="font-bold text-black">Email: </span>
-                {email || 'N/A'}
+                {email}
               </Text>
               <Text className="text-base leading-6 text-black">
                 <span className="font-bold text-black">Message:</span>
@@ -36,7 +32,6 @@ export default function ContactEmail(props: ContactFormType): ReactElement {
                 {message}
               </Text>
             </Section>
-            <Hr />
           </Container>
         </Body>
       </Tailwind>

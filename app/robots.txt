@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow:
+
+Sitemap: https://www.michaelwhittet.co.uk/sitemap.xml

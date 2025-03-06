@@ -44,16 +44,12 @@ export default function ContactForm() {
       <label className="block mb-4 font-bold w-full sm:w-lg">
         Name:
         <input
-          aria-describedby="name-error"
+          autoComplete="name"
           className={fieldStyling}
           {...register('name', { required: 'Name is required' })}
         />
         {errors.name && (
-          <p
-            className="font-normal !mt-2 text-red-600"
-            id="name-error"
-            role="alert"
-          >
+          <p className="font-normal !mt-2 text-red-600" role="alert">
             {errors.name.message}
           </p>
         )}
@@ -61,16 +57,12 @@ export default function ContactForm() {
       <label className="block mb-4 font-bold w-full sm:w-lg">
         Email address:
         <input
-          aria-describedby="email-error"
+          autoComplete="email"
           className={fieldStyling}
           {...register('email', { required: 'Email is required' })}
         />
         {errors.email && (
-          <p
-            className="font-normal !mt-2 text-red-600"
-            id="email-error"
-            role="alert"
-          >
+          <p className="font-normal !mt-2 text-red-600" role="alert">
             {errors.email.message}
           </p>
         )}
@@ -78,16 +70,11 @@ export default function ContactForm() {
       <label className="block mb-4 font-bold w-full sm:w-lg">
         Message:
         <textarea
-          aria-describedby="message-error"
           className={`${fieldStyling} h-36`}
           {...register('message', { required: 'Message is required' })}
         />
         {errors.message && (
-          <p
-            className="font-normal !mt-2 text-red-600"
-            id="message-error"
-            role="alert"
-          >
+          <p className="font-normal !mt-2 text-red-600" role="alert">
             {errors.message.message}
           </p>
         )}

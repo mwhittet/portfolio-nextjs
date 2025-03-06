@@ -10,15 +10,15 @@ export type Card = {
 export const ContactFormSchema = z.object({
   name: z
     .string()
-    .min(1, { message: 'Name is required' })
+    .nonempty({ message: 'Name is required' })
     .max(100, { message: 'Name is too long' }),
   email: z
     .string()
-    .min(1, { message: 'Email is required' })
+    .nonempty({ message: 'Email is required' })
     .email({ message: 'Invalid email format' }),
   message: z
     .string()
-    .min(1, { message: 'Message is required' })
+    .nonempty({ message: 'Message is required' })
     .max(1000, { message: 'Message is too long' }),
 });
 
