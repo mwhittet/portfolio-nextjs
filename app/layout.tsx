@@ -14,6 +14,9 @@ const marmelad = Marmelad({
 const { description, liveURL, title } = SITE_DATA;
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: './',
+  },
   description,
   metadataBase: new URL(liveURL),
   openGraph: {
@@ -27,6 +30,15 @@ export const metadata: Metadata = {
     siteName: title,
     title,
     type: 'website',
+    url: './',
+  },
+  robots: {
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+    index: true,
   },
   title: {
     template: `${title} | %s`,
