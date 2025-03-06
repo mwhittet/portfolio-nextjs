@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { HEADER_LINKS, NAME } from '@/app/data';
+import { HEADER_LINKS, SITE_DATA } from '@/app/data';
 
 export default function Header() {
   const pathname = usePathname();
@@ -12,7 +12,7 @@ export default function Header() {
       <Link
         className="block transition-[fill] delay-300 duration-300 ease-out hover:fill-international-orange motion-reduce:transition-none"
         href="/"
-        title={NAME}
+        title={SITE_DATA.title}
       >
         <svg
           aria-hidden

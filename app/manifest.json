@@ -2,6 +2,7 @@
   "background_color": "#000000",
   "description": "Portfolio of Michael Whittet, a Front End Developer based just outside of London in Essex",
   "display": "standalone",
+  "id": "/",
   "icons": [
     {
       "src": "/icon-48x48.png",
@@ -22,8 +23,20 @@
       "purpose": "any"
     },
     {
+      "src": "/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
       "src": "/icon-144x144.png",
       "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-152x152.png",
+      "sizes": "152x152",
       "type": "image/png",
       "purpose": "any"
     },
@@ -64,7 +77,7 @@
       "src": "/screenshot2.webp",
       "type": "image/webp",
       "form_factor": "wide",
-      "sizes": "2559x1270"
+      "sizes": "1280x800"
     }
   ],
   "short_name": "MW's Portfolio",

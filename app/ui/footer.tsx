@@ -1,5 +1,5 @@
 import SocialLinks from '@/app/ui/social-links';
-import { NAME } from '@/app/data';
+import { SITE_DATA } from '@/app/data';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -11,7 +11,7 @@ export default function Footer() {
         Proudly built with NextJs, TypeScript & Tailwind, hosted via Netlify
       </p>
       <p>
-        Copyright &copy; {year}, {NAME}
+        Copyright &copy; {year}, {SITE_DATA.title}
       </p>
     </footer>
   );

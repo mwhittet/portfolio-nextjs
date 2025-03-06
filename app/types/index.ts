@@ -51,6 +51,12 @@ export type PortfolioItems = {
   }[];
 }[];
 
+export type SiteData = {
+  description: string;
+  liveURL: string;
+  title: string;
+};
+
 export type SocialLink = {
   icon: IconType;
 } & Link;

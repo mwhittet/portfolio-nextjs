@@ -4,6 +4,7 @@ import type {
   PortfolioCards,
   PortfolioItems,
   SocialLinks,
+  SiteData,
 } from '@/app/types';
 
 export const HEADER_LINKS: Links = [
@@ -12,7 +13,11 @@ export const HEADER_LINKS: Links = [
   { href: '/contact', label: 'Contact' },
 ];
 
-export const NAME: string = 'Michael Whittet';
+export const SITE_DATA: SiteData = {
+  description: `Portfolio of Michael Whittet, a Front End Developer based just outside of London in Essex`,
+  liveURL: 'https://www.michaelwhittet.co.uk/',
+  title: 'Michael Whittet',
+};
 
 export const PORTFOLIO_CARDS: PortfolioCards = [
   {

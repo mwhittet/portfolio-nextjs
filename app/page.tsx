@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { NAME } from '@/app/data';
+import { SITE_DATA } from '@/app/data';
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
         }}
       >
         <span className="text-international-orange">Hello!</span> I&#39;m{' '}
-        <span className="text-international-orange">{NAME}</span> aka Mike,
+        <span className="text-international-orange">{SITE_DATA.title}</span> aka Mike,
         Bruce, Buzz, Spike, Goo, Whittet (those are some of my nicknames!) &amp;
         I am a{' '}
         <span className="text-international-orange">Front End Developer</span>{' '}

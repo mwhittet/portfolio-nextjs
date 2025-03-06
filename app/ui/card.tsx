@@ -5,7 +5,7 @@ import type { Card } from '@/app/types';
 export default function Card({ href, name, src }: Card) {
   const cardContent = (
     <>
-      <Image alt="" height={237} priority={true} src={src} width={474} />
+      <Image alt="" height={370} priority={true} src={src} width={740} />
       <span className="block text-xl sm:text-2xl mt-2.5">{name}</span>
     </>
   );
