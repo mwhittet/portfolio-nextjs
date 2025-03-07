@@ -21,6 +21,12 @@ export const SITE_DATA: SiteData = {
 
 export const PORTFOLIO_CARDS: PortfolioCards = [
   {
+    hrefUrl: '/portfolio/eagle-eye',
+    imageUrl: '/images/portfolio/eagleeye.webp',
+    name: 'Eagle Eye Inventories',
+    portfolioSlug: 'eagle-eye',
+  },
+  {
     hrefUrl: '/portfolio/barnes-code',
     imageUrl: '/images/portfolio/barnescode.jpg',
     name: 'Barnes Code',
@@ -59,6 +65,53 @@ export const PORTFOLIO_CARDS: PortfolioCards = [
 ];
 
 export const PORTFOLIO_ITEMS: PortfolioItems = [
+  {
+    title: 'Eagle Eye Inventories',
+    slug: 'eagle-eye',
+    intro: [
+      'I was given a link to a Canva sketch to demonstrate how my clients would like there website to look. I provided some feedback that was taken on board and I was able to make required changes where necessary. These included changing the typography so that it was a consistent size, updating the buttons to compliment each other, separating the contact form away from the business information to prevent over crowding and adding a mobile menu to name a few.',
+      "I decided to use Next.js as the website will be growing in size in the future, I'm also learning more about this framework after building my portfolio using it (I really like the built in optimizations, using the latest React features etc). I've also used TypeScript, Tailwind and Netlify has been integrated with Github for CI/CD.",
+      'Managing the clients expectations with daily updates and changes on a development URL so that they could visually see the progress was very much welcomed and improved the experience for both parties. I heavily optimized the metadata to aid SEO as well as incorporating a manifest.json, robots.txt, sitemap.xml and Open Graph/Twitter imagery into the website.',
+      "I've setup Twilio's SendGrid to handle the contact form submissions along with zod for email validation and a custom email template using react-email which was something new for me to use. The site is now live, took just under a week to build and I really enjoyed working on it.",
+    ],
+    achievements: [
+      'First time using react-email to build a custom email template',
+    ],
+    skills: [
+      'Next.js',
+      'TypeScript',
+      'Tailwind',
+      'Netlify',
+      'react-email',
+      'zod',
+      'Project Management',
+      'SEO',
+      'Design',
+      'Email integration',
+    ],
+    projects: [
+      {
+        name: 'Eagle Eye',
+        url: 'https://www.eagle-eye-inventories.co.uk/',
+        image: '/images/portfolio/eagleeye.webp',
+      },
+      {
+        name: 'Eagle Eye | About us',
+        url: 'https://www.eagle-eye-inventories.co.uk/#about-us',
+        image: '/images/projects/eagleeye-1.webp',
+      },
+      {
+        name: 'Eagle Eye | Services',
+        url: 'https://www.eagle-eye-inventories.co.uk/#services',
+        image: '/images/projects/eagleeye-2.webp',
+      },
+      {
+        name: 'Eagle Eye | Contact',
+        url: 'https://www.eagle-eye-inventories.co.uk/#contact-us',
+        image: '/images/projects/eagleeye-3.webp',
+      },
+    ],
+  },
   {
     title: 'Barnes Code',
     slug: 'barnes-code',

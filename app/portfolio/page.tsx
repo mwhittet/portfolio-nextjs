@@ -24,11 +24,11 @@ export default function Portfolio() {
       </p>
       <h2>Personal projects:</h2>
       <div className="grid gap-7 md:grid-cols-[1fr_1fr] mb-7">
-        {portfolioCards(0, 2)}
+        {portfolioCards(0, 3)}
       </div>
 
       <h2>Professional experience:</h2>
-      <div className="grid gap-7 md:grid-cols-[1fr_1fr]">{portfolioCards(2)}</div>
+      <div className="grid gap-7 md:grid-cols-[1fr_1fr]">{portfolioCards(3)}</div>
     </>
   );
 }
