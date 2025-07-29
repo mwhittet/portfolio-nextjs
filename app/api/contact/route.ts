@@ -35,22 +35,21 @@ import ContactEmail from '@/app/ui/contactEmail';
 //   }
 // }
 
+const mailtrap = new MailtrapClient({ token: process.env.MAILTRAP_TOKEN! });
+
 export async function POST(req: Request) {
   try {
     const data: ContactFormType = await req.json();
-    const client = new MailtrapClient({ token: process.env.MAILTRAP_TOKEN! });
-    const sender = { name: 'Mailtrap Test', email: process.env.SENDER_EMAIL! };
-
     const html = await render(createElement(ContactEmail, data));
 
-    const msg = {
-      from: sender,
+    const result = await mailtrap.send({
+      from: { email: process.env.SENDER_EMAIL!, name: 'Mailtrap Test' },
       to: [{ email: process.env.RECIPIENT_EMAIL! }],
       subject: `New portfolio submission from: '${data.name}'`,
       html,
-    };
+    });
 
-    await client.send(msg);
+    console.log('Email sent successfully:', result);
 
     return NextResponse.json(
       { message: 'Email sent successfully' },
