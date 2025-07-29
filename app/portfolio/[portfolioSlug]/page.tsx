@@ -76,13 +76,13 @@ export default async function PortfolioItem({
       {projects.length > 0 && (
         <>
           <h2>What I have worked on:</h2>
-          <div className="grid gap-7 md:grid-cols-[1fr_1fr]">
+          <ul className="grid gap-7 md:grid-cols-[1fr_1fr]">
             {projects.map((project, index) => {
               const { image, name, url } = project;
 
               return <Card href={url} key={index} name={name} src={image} />;
             })}
-          </div>
+          </ul>
         </>
       )}
     </>

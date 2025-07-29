@@ -12,13 +12,15 @@ export default function Card({ href, name, src }: Card) {
   const cardStyling: string = 'group text-center overflow-hidden';
 
   return href === '/' ? (
-    <div className={cardStyling}>{cardContent}</div>
+    <li className={cardStyling}>{cardContent}</li>
   ) : (
-    <Link
-      className={`transition-[color] delay-300 duration-300 ease-out md:hover:text-international-orange motion-reduce:transition-none ${cardStyling}`}
-      href={href}
-    >
-      {cardContent}
-    </Link>
+    <li>
+      <Link
+        className={`transition-[color] delay-300 duration-300 ease-out md:hover:text-international-orange motion-reduce:transition-none ${cardStyling}`}
+        href={href}
+      >
+        {cardContent}
+      </Link>
+    </li>
   );
 }

@@ -23,12 +23,20 @@ export default function Portfolio() {
         when I can too, here are a few examples:
       </p>
       <h2>Personal projects:</h2>
-      <div className="grid gap-7 md:grid-cols-[1fr_1fr] mb-7">
+      <ul
+        className="grid gap-7 md:grid-cols-[1fr_1fr] mb-7"
+        data-testid="personal-projects"
+      >
         {portfolioCards(0, 3)}
-      </div>
+      </ul>
 
       <h2>Professional experience:</h2>
-      <div className="grid gap-7 md:grid-cols-[1fr_1fr]">{portfolioCards(3)}</div>
+      <ul
+        className="grid gap-7 md:grid-cols-[1fr_1fr]"
+        data-testid="professional-experience"
+      >
+        {portfolioCards(3)}
+      </ul>
     </>
   );
 }
