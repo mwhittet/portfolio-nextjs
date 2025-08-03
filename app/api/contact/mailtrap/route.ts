@@ -6,9 +6,9 @@ import { ContactFormType } from '@/app/types';
 import ContactEmail from '@/app/ui/contactEmail';
 
 const mailtrap = new MailtrapClient({
-  accountId: +process.env.ACCOUNT_ID!,
-  testInboxId: +process.env.TEST_INBOX_ID!,
-  sandbox: true,
+  // accountId: +process.env.ACCOUNT_ID!,
+  // testInboxId: +process.env.TEST_INBOX_ID!,
+  // sandbox: true,
   token: process.env.MAILTRAP_TOKEN!,
 });
 
