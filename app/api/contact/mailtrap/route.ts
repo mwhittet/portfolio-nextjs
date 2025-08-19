@@ -5,14 +5,14 @@ import { render } from '@react-email/render';
 import { ContactFormType } from '@/app/types';
 import ContactEmail from '@/app/ui/contactEmail';
 
-const mailtrap = new MailtrapClient({
-  // accountId: +process.env.ACCOUNT_ID!,
-  // testInboxId: +process.env.TEST_INBOX_ID!,
-  // sandbox: true,
-  token: process.env.MAILTRAP_TOKEN!,
-});
-
 export async function POST(req: Request) {
+  const mailtrap = new MailtrapClient({
+    // accountId: +process.env.ACCOUNT_ID!,
+    // testInboxId: +process.env.TEST_INBOX_ID!,
+    // sandbox: true,
+    token: process.env.MAILTRAP_TOKEN!,
+  });
+
   try {
     const data: ContactFormType = await req.json();
     const html = await render(createElement(ContactEmail, data));
