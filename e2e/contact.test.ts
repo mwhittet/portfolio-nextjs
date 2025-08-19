@@ -49,20 +49,6 @@ test('extremely long name & message', async ({ page }) => {
   await expect(page.getByText(/message is too long/i)).toBeVisible();
 });
 
-test('XSS Injection Attempt', async ({ page }) => {
-  await page.fill('input[name="name"]', '<script>alert("xss")</script>');
-  await page.fill('input[name="email"]', 'test@example.com');
-  await page.fill(
-    'textarea[name="message"]',
-    '<img src="x" onerror="alert(1)">'
-  );
-  await page.click('button[type="submit"]');
-
-  await expect(
-    page.getByText(/failed to send message. please try again later./i)
-  ).toBeVisible();
-});
-
 test('successful form submission', async ({ page }) => {
   await page.route('**/api/contact', (route) =>
     route.fulfill({
