@@ -13,12 +13,13 @@ export default function ContactForm() {
     reset,
   } = useForm<ContactFormType>({ resolver: zodResolver(ContactFormSchema) });
   const [successMessage, setSuccessMessage] = useState<string>('');
+  const [errorMessage, setErrorMessage] = useState<string>('');
   const fieldStyling: string =
     'font-normal mt-2 w-full bg-white h-10 p-2 rounded-sm border border-dustyGray focus:outline-0 focus:ring-4 focus:ring-malibu/40 focus:border-malibu';
 
   const onSubmit = async (data: ContactFormType) => {
     try {
-      const response = await fetch('/api/contact/mailtrap', {
+      const response = await fetch('/api/contact/mailtrap/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
@@ -28,11 +29,13 @@ export default function ContactForm() {
         setSuccessMessage('Your message has been sent! Thank you!');
         reset();
       } else {
-        setSuccessMessage('Failed to send message. Please try again later.');
+        setErrorMessage('Failed to send message. Please try again later.');
+        reset();
       }
     } catch (error) {
       console.error('Error sending message:', error);
-      setSuccessMessage('An error has occurred. Please try again later.');
+      setErrorMessage('An error has occurred. Please try again later.');
+      reset();
     }
   };
 
@@ -88,6 +91,7 @@ export default function ContactForm() {
       {successMessage && (
         <p className="!mt-4 text-green-600">{successMessage}</p>
       )}
+      {errorMessage && <p className="!mt-4 text-red-600">{errorMessage}</p>}
     </form>
   );
 }
