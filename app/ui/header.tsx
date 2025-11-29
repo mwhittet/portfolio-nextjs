@@ -36,9 +36,9 @@ export default function Header() {
               key={index}
             >
               <span
-                className={`bg-left-bottom bg-gradient-to-r from-international-orange to-international-orange bg-[length:0%_3px] bg-no-repeat group-hover:bg-[length:100%_3px] transition-all delay-150 duration-500 ease-out pb-1.5 ${
+                className={`bg-bottom-left bg-linear-to-r from-international-orange to-international-orange bg-size-[0%_3px] bg-no-repeat group-hover:bg-size-[100%_3px] transition-all delay-150 duration-500 ease-out pb-1.5 ${
                   isActive
-                    ? 'bg-left-bottom bg-gradient-to-r from-international-orange to-international-orange bg-[length:100%_3px]'
+                    ? 'bg-bottom-left bg-linear-to-r from-international-orange to-international-orange bg-size-[100%_3px]'
                     : 'text-black'
                 }`}
               >
