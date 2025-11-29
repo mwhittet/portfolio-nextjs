@@ -7,13 +7,13 @@ export default function Home() {
   return (
     <motion.div
       animate="visible"
-      className="flex flex-col flex-[1] justify-center"
+      className="flex flex-col flex-1 justify-center"
       exit={{ opacity: 0, transition: { duration: 1 } }}
       initial="hidden"
       variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
     >
       <motion.h1
-        className="text-center !no-underline !m-0"
+        className="text-center no-underline! m-0!"
         variants={{
           hidden: { opacity: 0, y: -50 },
           visible: { opacity: 1, y: 0, transition: { duration: 2 } },

@@ -57,3 +57,7 @@ figure {
 figure figcaption {
   color: var(--color-international-orange);
 }
+
+.input-field {
+  @apply font-normal mt-2 w-full bg-white h-10 p-2 rounded-sm border border-dustyGray focus:outline-0 focus:ring-4 focus:ring-malibu/40 focus:border-malibu;
+}

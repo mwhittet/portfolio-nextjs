@@ -25,7 +25,7 @@ export default function Contact() {
         .
       </p>
       <ContactForm />
-      <figure className="lg:w-1/2 !mb-0">
+      <figure className="lg:w-1/2 mb-0!">
         <blockquote>Creativity is contagious. Pass it on.</blockquote>
         <figcaption> — Albert Einstein</figcaption>
       </figure>

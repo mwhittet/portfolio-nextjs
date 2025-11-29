@@ -14,8 +14,6 @@ export default function ContactForm() {
   } = useForm<ContactFormType>({ resolver: zodResolver(ContactFormSchema) });
   const [successMessage, setSuccessMessage] = useState<string>('');
   const [errorMessage, setErrorMessage] = useState<string>('');
-  const fieldStyling: string =
-    'font-normal mt-2 w-full bg-white h-10 p-2 rounded-sm border border-dustyGray focus:outline-0 focus:ring-4 focus:ring-malibu/40 focus:border-malibu';
 
   const onSubmit = async (data: ContactFormType) => {
     try {
@@ -48,11 +46,11 @@ export default function ContactForm() {
         Name:
         <input
           autoComplete="name"
-          className={fieldStyling}
+          className="input-field"
           {...register('name', { required: 'Name is required' })}
         />
         {errors.name && (
-          <p className="font-normal !mt-2 text-red-600" role="alert">
+          <p className="font-normal mt-2! text-red-600" role="alert">
             {errors.name.message}
           </p>
         )}
@@ -61,11 +59,11 @@ export default function ContactForm() {
         Email address:
         <input
           autoComplete="email"
-          className={fieldStyling}
+          className="input-field"
           {...register('email', { required: 'Email is required' })}
         />
         {errors.email && (
-          <p className="font-normal !mt-2 text-red-600" role="alert">
+          <p className="font-normal mt-2! text-red-600" role="alert">
             {errors.email.message}
           </p>
         )}
@@ -73,11 +71,11 @@ export default function ContactForm() {
       <label className="block mb-4 font-bold w-full sm:w-lg">
         Message:
         <textarea
-          className={`${fieldStyling} h-36`}
+          className="input-field h-36!"
           {...register('message', { required: 'Message is required' })}
         />
         {errors.message && (
-          <p className="font-normal !mt-2 text-red-600" role="alert">
+          <p className="font-normal mt-2! text-red-600" role="alert">
             {errors.message.message}
           </p>
         )}
@@ -89,9 +87,9 @@ export default function ContactForm() {
         Send message
       </button>
       {successMessage && (
-        <p className="!mt-4 text-green-600">{successMessage}</p>
+        <p className="mt-4! text-green-600">{successMessage}</p>
       )}
-      {errorMessage && <p className="!mt-4 text-red-600">{errorMessage}</p>}
+      {errorMessage && <p className="mt-4! text-red-600">{errorMessage}</p>}
     </form>
   );
 }
