@@ -16,24 +16,30 @@ export default function ContactForm() {
   const [errorMessage, setErrorMessage] = useState<string>('');
 
   const onSubmit = async (data: ContactFormType) => {
-    try {
-      const response = await fetch('/api/contact/mailtrap/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
+    if ((data.lastname ?? '').length > 0) {
+      setErrorMessage('Your message has been sent!');
+      reset();
+      return;
+    } else {
+      try {
+        const response = await fetch('/api/contact/mailtrap/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
 
-      if (response.ok) {
-        setSuccessMessage('Your message has been sent! Thank you!');
-        reset();
-      } else {
-        setErrorMessage('Failed to send message. Please try again later.');
+        if (response.ok) {
+          setSuccessMessage('Your message has been sent! Thank you!');
+          reset();
+        } else {
+          setErrorMessage('Failed to send message. Please try again later.');
+          reset();
+        }
+      } catch (error) {
+        console.error('Error sending message:', error);
+        setErrorMessage('An error has occurred. Please try again later.');
         reset();
       }
-    } catch (error) {
-      console.error('Error sending message:', error);
-      setErrorMessage('An error has occurred. Please try again later.');
-      reset();
     }
   };
 
@@ -54,6 +60,15 @@ export default function ContactForm() {
             {errors.name.message}
           </p>
         )}
+      </label>
+      <label className="hidden mb-4 font-bold w-full sm:w-lg">
+        Lastname:
+        <input
+          autoComplete="off"
+          className="input-field"
+          tabIndex={-1}
+          {...register('lastname')}
+        />
       </label>
       <label className="block mb-4 font-bold w-full sm:w-lg">
         Email address:

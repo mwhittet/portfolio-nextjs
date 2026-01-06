@@ -12,6 +12,7 @@ export const ContactFormSchema = z.object({
     .string()
     .nonempty({ message: 'Name is required' })
     .max(100, { message: 'Name is too long' }),
+  lastname: z.string().optional(),
   email: z
     .string()
     .nonempty({ message: 'Email is required' })
