@@ -15,6 +15,7 @@
 next-env.d.ts
 
 # Playwright
+coverage/
 node_modules/
 /test-results/
 /playwright-report/
